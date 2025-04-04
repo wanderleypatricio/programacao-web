@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --fundo: rgb(240, 249, 251);
+    --theme: rgb(11, 78, 101);
+    --menu: #171b1d;
+}
+
+body {
+    background-color: var(--fundo);
+    font-family: Impact, 'Oswald', Arial Narrow Bold, sans-serif;
+    font-weight: 400;
+}
+
+.navbar {
+    background-color: var(--theme);
+    color: aliceblue;
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    font-size: 2.3em;
+    float: left;
+    padding: 10px 20px 0px 10%;
+    width: 30%;
+
+}
+
+/*formatação do menu*/
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li {
+    position: relative;
+    margin-top: 10px;
+}
+
+ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s;
+}
+
+ul li a:hover {
+    background: var(--menu);
+    color: #fad91f;
+}
+/* fim da formatação do menu*/
+
+/* Estilizando o submenu */
+ul li ul {
+    display: none; /*oculta o submenu*/
+    position: absolute; /*mantem o submenu fixo*/
+    top: 100%;
+    left: 0;
+    background: var(--menu);
+    width: 150px; /*define a largura do submenu*/
+    padding: 0; /*mantém o submenu alinhado com o item do menu pai*/
+}
+
+ul li ul li {
+    display: block;
+    width: 100%;
+}
+
+ul li ul li a {
+    padding: 10px;
+    display: block;
+    color: white;
+    transition: background 0.3s;
+}
+
+ul li ul li a:hover {
+    background: var(--theme);
+    color: #fad91f;
+}
+/*fim da estilização do submenu*/
+
+/* Exibir submenu ao passar o mouse */
+ul li:hover ul {
+    display: block;
+    border: 1px var(--menu) solid;
+    border-radius: 10px;
+}
+
+.text-banner {
+    background-color: var(--theme);
+    height: 350px;
+    padding: 5%;
+    width: 30%;
+    color: aliceblue;
+    float:left;
+}
+
+.title {
+    font-size: 3em;
+    width: 80%;
+    padding: 2%;
+    margin: 0px auto;
+}
+
+.subtitle {
+    padding-left: 2%;
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.text-banner .button {
+    background-color: #fad91f;
+    padding: 5%;
+    color: var(--menu);
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+
+.text-banner .button a {
+    text-decoration: none;
+    color: #171b1d;
+}
+
+.text-banner .button:hover{
+    background-color: #171b1d;
+    padding: 5%;
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 2%;
+    color: aliceblue;
+}
+
+.button a:hover{
+    color: #fad91f;
+}
+
+.menu{
+    float: left;
+    width: 40%;
+}
+
+.btn-users{
+    margin-top: 10px;
+    padding: 10px;
+    float: left;    
+}
+
+.btn-login {
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.btn-login:hover{
+    background-color:#fad91f;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #171b1d;
+}
+
+.btn-signup {
+    background-color:#fad91f;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #171b1d;
+}
+
+.btn-signup:hover{
+    color: aliceblue;
+    background-color:#171b1d;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.image-banner{
+    width: 60%;
+    height: 500px;
+    float: left;
+    background-color: var(--theme);
+}
+
+.image-banner img{
+    width: 100%;
+    border-radius: 60px 0px 60px 0px;
+}
