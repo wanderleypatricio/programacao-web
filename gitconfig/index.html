@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Cheat Sheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📘 Git Cheat Sheet</h1>
+        <p>Referência rápida dos principais comandos Git</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>⚙️ Configuração Inicial</h2>
+            <pre><code>git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"</code></pre>
+        </section>
+
+        <section>
+            <h2>📁 Iniciar um Repositório</h2>
+            <pre><code>git init</code></pre>
+        </section>
+
+        <section>
+            <h2>🔍 Verificar o Status</h2>
+            <pre><code>git status</code></pre>
+        </section>
+
+        <section>
+            <h2>➕ Adicionar Arquivos</h2>
+            <pre><code>git add arquivo.txt
+git add .</code></pre>
+        </section>
+
+        <section>
+            <h2>💬 Commit</h2>
+            <pre><code>git commit -m "mensagem"</code></pre>
+        </section>
+
+        <section>
+            <h2>🚀 Push & Pull</h2>
+            <pre><code>git push origin main
+git pull origin main</code></pre>
+        </section>
+
+        <section>
+            <h2>🌿 Branches</h2>
+            <pre><code>git branch
+git branch nova-branch
+git checkout nova-branch
+git checkout -b nova-branch
+git branch -d nome-da-branch</code></pre>
+        </section>
+
+        <section>
+            <h2>🕓 Histórico</h2>
+            <pre><code>git log
+git log --oneline --graph</code></pre>
+        </section>
+
+        <section>
+            <h2>♻️ Reset</h2>
+            <pre><code>git reset HEAD arquivo.txt
+git reset --soft HEAD~1
+git reset --hard HEAD~1</code></pre>
+        </section>
+
+        <section>
+            <h2>🗑️ Remover Arquivos</h2>
+            <pre><code>git rm arquivo.txt</code></pre>
+        </section>
+
+        <section>
+            <h2>🔗 Vincular Repositório</h2>
+            <pre><code>git remote add origin https://github.com/seu-usuario/repositorio.git
+git push -u origin main</code></pre>
+        </section>
+
+        <section>
+            <h2>🧠 .gitignore</h2>
+            <pre><code>node_modules/
+.env
+dist/
+*.log</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito com ❤️ por OrignalSystem</p>
+    </footer>
+</body>
+</html>
