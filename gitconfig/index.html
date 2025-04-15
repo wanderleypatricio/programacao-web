@@ -1,95 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Cheat Sheet</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Git Cheat Sheet com Explicações</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>📘 Git Cheat Sheet</h1>
-        <p>Referência rápida dos principais comandos Git</p>
-    </header>
+  <header>
+    <h1>📘 Git Cheat Sheet</h1>
+    <p>Referência rápida com explicações dos principais comandos Git</p>
+  </header>
 
-    <main>
-        <section>
-            <h2>⚙️ Configuração Inicial</h2>
-            <pre><code>git config --global user.name "Seu Nome"
+  <main>
+    <section>
+      <h2>⚙️ Configuração Inicial</h2>
+      <p>Define seu nome e email para os commits do Git.</p>
+      <pre><code>git config --global user.name "Seu Nome"
 git config --global user.email "seu@email.com"</code></pre>
-        </section>
+    </section>
 
-        <section>
-            <h2>📁 Iniciar um Repositório</h2>
-            <pre><code>git init</code></pre>
-        </section>
+    <section>
+      <h2>📁 Iniciar um Repositório</h2>
+      <p>Cria um novo repositório Git local na pasta atual.</p>
+      <pre><code>git init</code></pre>
+    </section>
 
-        <section>
-            <h2>🔍 Verificar o Status</h2>
-            <pre><code>git status</code></pre>
-        </section>
+    <section>
+      <h2>🔍 Verificar o Status</h2>
+      <p>Mostra arquivos modificados, adicionados ou não rastreados.</p>
+      <pre><code>git status</code></pre>
+    </section>
 
-        <section>
-            <h2>➕ Adicionar Arquivos</h2>
-            <pre><code>git add arquivo.txt
-git add .</code></pre>
-        </section>
+    <section>
+      <h2>➕ Adicionar Arquivos</h2>
+      <p>Prepara arquivos para o próximo commit.</p>
+      <pre><code>git add arquivo.txt       # Adiciona um arquivo específico
+git add .                 # Adiciona todos os arquivos modificados</code></pre>
+    </section>
 
-        <section>
-            <h2>💬 Commit</h2>
-            <pre><code>git commit -m "mensagem"</code></pre>
-        </section>
+    <section>
+      <h2>💬 Commit</h2>
+      <p>Salva as mudanças no histórico do Git.</p>
+      <pre><code>git commit -m "mensagem descritiva"</code></pre>
+    </section>
 
-        <section>
-            <h2>🚀 Push & Pull</h2>
-            <pre><code>git push origin main
+    <section>
+      <h2>🚀 Push & Pull</h2>
+      <p>Push envia commits locais para o repositório remoto. Pull traz atualizações do remoto para local.</p>
+      <pre><code>git push origin main
 git pull origin main</code></pre>
-        </section>
+    </section>
 
-        <section>
-            <h2>🌿 Branches</h2>
-            <pre><code>git branch
-git branch nova-branch
-git checkout nova-branch
-git checkout -b nova-branch
-git branch -d nome-da-branch</code></pre>
-        </section>
+    <section>
+      <h2>🌿 Branches</h2>
+      <p>Trabalhe com versões paralelas do projeto.</p>
+      <pre><code>git branch                  # Lista branches
+git branch nova-feature     # Cria nova branch
+git checkout nova-feature   # Muda para a nova branch
+git checkout -b nova-feature # Cria e já muda para a branch
+git branch -d nome-da-branch # Deleta uma branch local</code></pre>
+    </section>
 
-        <section>
-            <h2>🕓 Histórico</h2>
-            <pre><code>git log
-git log --oneline --graph</code></pre>
-        </section>
-
-        <section>
-            <h2>♻️ Reset</h2>
-            <pre><code>git reset HEAD arquivo.txt
-git reset --soft HEAD~1
-git reset --hard HEAD~1</code></pre>
-        </section>
-
-        <section>
-            <h2>🗑️ Remover Arquivos</h2>
-            <pre><code>git rm arquivo.txt</code></pre>
-        </section>
-
-        <section>
-            <h2>🔗 Vincular Repositório</h2>
-            <pre><code>git remote add origin https://github.com/seu-usuario/repositorio.git
-git push -u origin main</code></pre>
-        </section>
-
-        <section>
-            <h2>🧠 .gitignore</h2>
-            <pre><code>node_modules/
-.env
-dist/
-*.log</code></pre>
-        </section>
-    </main>
-
-    <footer>
-        <p>Feito com ❤️ por OrignalSystem</p>
-    </footer>
-</body>
-</html>
+    <section>
+      <h2>🕓 Histórico</h2>
+      <p>Mostra os commits feitos no projeto.</p>
+      <pre><code>git log                      # Exibe detalhes de cada commit
+git log --oneline --graph    # Visual compacta com ramificações</code></pre>
+    </section
