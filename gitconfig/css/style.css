@@ -42,12 +42,15 @@ h2 {
 }
 
 pre {
-    background: #f0f0f0;
+    background: #130fe4;
     padding: 1rem;
     border-radius: 5px;
     overflow-x: auto;
 }
 
+p {
+    color: #333;
+}
 code {
     font-family: monospace;
     font-size: 0.95rem;
