@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícias do Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Notícias do Dia</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Política</a></li>
+        <li><a href="#">Esportes</a></li>
+        <li><a href="#">Tecnologia</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1200&q=80" alt="Congresso Nacional">
+            <p>📰 Reforma tributária avança no Congresso Nacional</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1200&q=80" alt="Partida de futebol">
+            <p>⚽ Final da Copa: clássico entre os maiores rivais</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1581090700227-1e8f21a1f7fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Tecnologia e IA">
+            <p>🤖 Nova IA promete revolucionar a educação online</p>
+          </div>
+    </div>
+    <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+  </section>
+  
+  <main>
+    <section>
+      <h2>Últimas Notícias</h2>
+      <div class="news-list">
+        <article>
+            <img src="https://images.unsplash.com/photo-1600880292000-0f28b9df54b2?auto=format&fit=crop&w=800&q=80" alt="Reunião de governo">
+            <h3>Governo propõe nova reforma</h3>
+            <p>O projeto de lei da reforma tributária foi apresentado hoje no Congresso...</p>
+          </article>
+          
+          <article>
+            <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="Jogo de futebol">
+            <h3>Time brasileiro vence no último minuto</h3>
+            <p>Com um gol nos acréscimos, o time garantiu a vaga para a final da Copa...</p>
+          </article>
+          
+          <article>
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Tecnologia e IA">
+            <h3>Nova IA da OpenAI é lançada</h3>
+            <p>A nova inteligência artificial promete avanços significativos na educação...</p>
+          </article>
+          
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Notícias do Dia. Todos os direitos reservados.</p>
+  </footer>
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+  
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    // Auto slide a cada 5 segundos
+    setInterval(nextSlide, 5000);
+  </script>
+
+</body>
+</html>

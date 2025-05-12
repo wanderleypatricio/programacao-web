@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  header {
+    background-color: #20232a;
+    color: white;
+    padding: 1rem 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav a {
+    color: #61dafb;
+    text-decoration: none;
+  }
+
+  .carousel {
+    background-color: #ccc;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  section h2 {
+    margin-bottom: 1rem;
+    border-left: 4px solid #61dafb;
+    padding-left: 0.5rem;
+  }
+
+  .news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  article {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+  }
+
+  article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  article h3 {
+    margin: 0.5rem 0;
+  }
+
+  footer {
+    background-color: #20232a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+    }
+
+    .carousel {
+      font-size: 1.2rem;
+    }
+  }
+
+  .carousel {
+    position: relative;
+    background-color: #ddd;
+    padding: 3rem 1rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: center;
+  }
+
+  .carousel-slide {
+    display: none;
+    font-size: 1.5rem;
+    min-width: 100%;
+  }
+
+  .carousel-slide.active {
+    display: block;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #20232a;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  .carousel-btn:hover {
+    opacity: 1;
+  }
+
+  .carousel-btn.prev {
+    left: 1rem;
+  }
+
+  .carousel-btn.next {
+    right: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-slide {
+      font-size: 1.1rem;
+    }
+    .carousel-btn {
+      font-size: 1.5rem;
+    }
+  }
+
+  .carousel-slide img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+  }
