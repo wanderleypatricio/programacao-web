@@ -81,3 +81,59 @@ function cadastrarProduto(produto) {
     .catch(error => console.error('Erro ao cadastrar produto:', error));
 }
 
+// Editar produto
+function editarProduto(id) {
+    fetch(`${apiUrl}/${id}`)
+        .then(response => response.json())
+        .then(produto => {
+            produtoIdInput.value = produto.id;
+            nomeInput.value = produto.nome;
+            precoInput.value = produto.preco;
+            descricaoInput.value = produto.descricao;
+
+            submitBtn.textContent = 'Atualizar';
+            resetBtn.classList.remove('hidden');
+        })
+        .catch(error => console.error('Erro ao buscar produto:', error));
+}
+
+// Atualizar produto
+function atualizarProduto(id, produto) {
+    fetch(`${apiUrl}/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(produto)
+    })
+    .then(response => response.json())
+    .then(produtoAtualizado => {
+        carregarProdutos();
+        form.reset();
+        produtoIdInput.value = '';
+        submitBtn.textContent = 'Cadastrar';
+        resetBtn.classList.add('hidden');
+    })
+    .catch(error => console.error('Erro ao atualizar produto:', error));
+}
+
+// Deletar produto
+function deletarProduto(id) {
+    if (confirm('Tem certeza que deseja excluir este produto?')) {
+        fetch(`${apiUrl}/${id}`, {
+            method: 'DELETE'
+        })
+        .then(() => {
+            carregarProdutos();
+        })
+        .catch(error => console.error('Erro ao excluir produto:', error));
+    }
+}
+
+// Resetar formulário ao cancelar edição
+resetBtn.addEventListener('click', () => {
+    form.reset();
+    produtoIdInput.value = '';
+    submitBtn.textContent = 'Cadastrar';
+    resetBtn.classList.add('hidden');
+});
